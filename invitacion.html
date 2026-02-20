@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucila & Gabriel!</title>
+
+  <link rel="icon" type="image/png" href="Pixelarte Isologotipo.png">
+
+  <link rel="stylesheet" href="inv.css">
+</head>
+<body>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="Diego Torres, Manuel Carrasco - Vas a Quedarte (Official Video).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Botón música -->
+  <button id="musicToggle" class="music-btn">▶</button>
+
+<section class="foto-portada">
+  <img src="INICIO.png" alt="Foto de los novios">
+
+  <div class="hero-text">
+    <span class="hero-title">NOS CASAMOS!</span>
+    <span class="hero-name">Lucila & Gabriel</span>
+  </div>
+
+  
+   <!-- CUENTA REGRESIVA -->
+  <div class="countdown-wrapper">
+    <div class="countdown">
+      <div class="time-box">
+        <span id="days">0</span>
+        <small>DÍAS</small>
+      </div>
+      <div class="time-box">
+        <span id="hours">0</span>
+        <small>HORAS</small>
+      </div>
+      <div class="time-box">
+        <span id="minutes">0</span>
+        <small>MINUTOS</small>
+      </div>
+      <div class="time-box">
+        <span id="seconds">0</span>
+        <small>SEGUNDOS</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <section class="section-blanca"></section>
+
+ <section class="frase-separador">
+  <div class="linea reveal"></div>
+
+  <p class="frase-texto reveal">
+HOY CELEBRAMOS EL AMOR... JUNTO A QUIÉNES LO HICIERON POSIBLE!<br> 
+ </p>
+
+  <div class="linea reveal"></div>
+</section>
+
+<section class="section-fecha reveal">
+  <div class="fecha-contenido">
+
+    <h2 class="fecha-titulo">Así lo celebraremos</h2>
+
+    <div class="evento-card">
+
+      <!-- CIVIL -->
+      <div class="evento-item">
+        <img src="Civil.png" class="evento-icono">
+        <p class="evento-titulo">Civil</p>
+        <p class="evento-info">
+          Miércoles 3 de Abril 2026 – 11:30 hs<br>
+          Delegación Registro Provincial de las Personas <br>
+          Avellaneda Nº 1306 - Róque Perez
+        </p>
+<button 
+  class="evento-boton"
+  onclick="abrirMapa('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.2666440462626!2d-59.333035!3d-35.398640699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bdbbf6c0ade697%3A0x70d02b0f5c5ad641!2sDelegaci%C3%B3n%20Registro%20Provincial%20de%20las%20Personas%20-%20Roque%20Perez!5e0!3m2!1ses-419!2sar!4v1771543708983!5m2!1ses-419!2sar')"
+>
+  VER MAPA
+</button>
+
+
+
+      </div>
+
+      <div class="evento-linea"></div>
+
+      <!-- IGLESIA -->
+      <div class="evento-item">
+        <img src="Iglesia.png" class="evento-icono">
+        <p class="evento-titulo">Ceremonia</p>
+        <p class="evento-info">
+          Sábado 4 de Abril 2026 – 20:30 hs<br>
+          Capilla Nuestra Señora de Luján
+          Rawson y Avellaneda - Róque Perez
+        </p>
+  <button 
+  class="evento-boton"
+  onclick="abrirMapa('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.0202945568794!2d-59.32801829999999!3d-35.4047475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bdbd618dba98ad%3A0x811dbacf3eb1d810!2sCapilla%20Nuestra%20Se%C3%B1ora%20de%20Luj%C3%A1n!5e0!3m2!1ses-419!2sar!4v1771543982343!5m2!1ses-419!2sar')"
+>
+  VER MAPA
+</button>
+
+
+      </div>
+
+      <div class="evento-linea"></div>
+
+      <!-- FIESTA -->
+      <div class="evento-item">
+        <img src="Fiesta.png" class="evento-icono">
+        <p class="evento-titulo">Celebración</p>
+        <p class="evento-info">
+          Posterior a la Ceremonia<br>
+          Centro Nativo Cardo Azul
+          Belgrano Nº 336 - Róque Perez
+        </p>
+<button 
+  class="evento-boton"
+  onclick="abrirMapa('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.2317076535865!2d-59.3342711!3d-35.399506800000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bdbb820960607d%3A0x8598be54814e722d!2sBelgrano%20336%2C%20B7245%20Roque%20P%C3%A9rez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1771544053211!5m2!1ses-419!2sar')"
+>
+  VER MAPA
+</button>
+
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</section>
+<!-- MAPA MODAL -->
+<div id="mapaModal" class="mapa-modal">
+  <div class="mapa-contenido">
+    <button class="mapa-cerrar" onclick="cerrarMapa()">✕</button>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1626.1202168971538!2d-59.33126465417543!3d-35.39929047399736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bdbb78d430bf3f%3A0x35914c0f6206ad46!2sAlberdi%201169%2C%20B7245%20Roque%20P%C3%A9rez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1768958518523!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+<section class="carousel-section reveal">
+  <div class="carousel-container carousel-hidden">
+
+
+    <button class="carousel-btn prev" onclick="moveSlide(this, -1)">‹</button>
+<button class="carousel-btn next" onclick="moveSlide(this, 1)">›</button>
+
+
+
+    <div class="carousel-track">
+      <div class="carousel-item"><img src="1.png" alt=""></div>
+      <div class="carousel-item"><img src="2.png" alt=""></div>
+      <div class="carousel-item"><img src="3.png" alt=""></div>
+      <div class="carousel-item"><img src="4.png" alt=""></div>
+      <div class="carousel-item"><img src="5.png" alt=""></div>
+      <div class="carousel-item"><img src="1.png" alt=""></div>
+      <div class="carousel-item"><img src="2.png" alt=""></div>
+      <div class="carousel-item"><img src="3.png" alt=""></div>
+      <div class="carousel-item"><img src="4.png" alt=""></div>
+      <div class="carousel-item"><img src="5.png" alt=""></div>
+      <div class="carousel-item"><img src="1.png" alt=""></div>
+      <div class="carousel-item"><img src="2.png" alt=""></div>
+      <div class="carousel-item"><img src="3.png" alt=""></div>
+      <div class="carousel-item"><img src="4.png" alt=""></div>
+      <div class="carousel-item"><img src="5.png" alt=""></div>
+      <div class="carousel-item"><img src="1.png" alt=""></div>
+      <div class="carousel-item"><img src="2.png" alt=""></div>
+      <div class="carousel-item"><img src="3.png" alt=""></div>
+      <div class="carousel-item"><img src="4.png" alt=""></div>
+      <div class="carousel-item"><img src="5.png" alt=""></div>
+      <div class="carousel-item"><img src="1.png" alt=""></div>
+      <div class="carousel-item"><img src="2.png" alt=""></div>
+      <div class="carousel-item"><img src="3.png" alt=""></div>
+      <div class="carousel-item"><img src="4.png" alt=""></div>
+      <div class="carousel-item"><img src="5.png" alt=""></div>
+      <div class="carousel-item"><img src="1.png" alt=""></div>
+      <div class="carousel-item"><img src="2.png" alt=""></div>
+      <div class="carousel-item"><img src="3.png" alt=""></div>
+      <div class="carousel-item"><img src="4.png" alt=""></div>
+      <div class="carousel-item"><img src="5.png" alt=""></div>
+      <div class="carousel-item"><img src="1.png" alt=""></div>
+      <div class="carousel-item"><img src="2.png" alt=""></div>
+      <div class="carousel-item"><img src="3.png" alt=""></div>
+      <div class="carousel-item"><img src="4.png" alt=""></div>
+      <div class="carousel-item"><img src="5.png" alt=""></div>
+      <div class="carousel-item"><img src="1.png" alt=""></div>
+      <div class="carousel-item"><img src="2.png" alt=""></div>
+      <div class="carousel-item"><img src="3.png" alt=""></div>
+      <div class="carousel-item"><img src="4.png" alt=""></div>
+      <div class="carousel-item"><img src="5.png" alt=""></div>
+      <div class="carousel-item"><img src="1.png" alt=""></div>
+      <div class="carousel-item"><img src="2.png" alt=""></div>
+      <div class="carousel-item"><img src="3.png" alt=""></div>
+      <div class="carousel-item"><img src="4.png" alt=""></div>
+      <div class="carousel-item"><img src="5.png" alt=""></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="dresscode-section reveal">
+
+  <!-- ICONO (reemplazá src por el tuyo) -->
+  <img src="Diamante.gif" alt="Dress Code" class="dresscode-icono">
+
+  <h2 class="dresscode-titulo">Dress Code</h2>
+
+  <p class="dresscode-tipo">ELEGANTE</p>
+
+  <div class="dresscode-linea"></div>
+
+  <p class="dresscode-aclaracion">
+    “Queremos verlos brillar con nosotros.”
+  </p>
+
+</section>
+
+<section class="frase-separador frase-oscura reveal">
+
+  <div class="linea-2 reveal"></div>
+
+  <p class="frase-texto-2 reveal">
+    LO QUE EMPEZÓ CÓMO UN ENCUENTRO,<br>
+    HOY ES UN PARA SIEMPRE!<br>
+  </p>
+
+  <div class="linea-2 reveal"></div>
+
+</section>
+
+<section class="album-section reveal">
+
+  <!-- ICONO (poné el tuyo) -->
+  <img src="Camara.gif" alt="Álbum de fotos" class="album-icono">
+
+  <h2 class="album-titulo">Quiero ver tus fotos</h2>
+
+  <p class="album-texto">
+    Pueden subir todas sus fotos del<br>
+    evento a nuestro álbum compartido<br>
+  </p>
+
+  <button class="album-boton" onclick="abrirAlbum()">
+  VER ÁLBUM
+</button>
+
+
+</section>
+
+<section class="regalo-section reveal">
+
+  <div class="regalo-contenido">
+
+    <!-- ICONO -->
+    <div class="regalo-icono">
+      <img src="Regalo.gif" alt="Regalo">
+    </div>
+
+    <h2 class="regalo-titulo">Regalo</h2>
+
+    <p class="regalo-texto">
+      "Sin ustedes, nuestra celebración no sería lo mismo.       
+      Tu presencia es el mejor regalo, pero si además pensas<br>
+      pensas en un obsequio para nosotros, te dejamos<br>
+      en un obsequio para nosotros, te dejamos nuestros datos<br>
+      bancarios para ayudarnos a seguir construyendo nuestro camino juntos<br>
+    </p>
+<button class="regalo-boton" onclick="abrirRegalo()">
+  VER DATOS BANCARIOS
+</button>
+
+  </div>
+
+</section>
+
+<section class="carousel-section reveal">
+  <div class="carousel-container carousel-hidden">
+
+
+    <button class="carousel-btn prev" onclick="moveSlide(this, -1)">‹</button>
+<button class="carousel-btn next" onclick="moveSlide(this, 1)">›</button>
+
+
+
+    <div class="carousel-track">
+      <div class="carousel-item"><img src="6.png" alt=""></div>
+      <div class="carousel-item"><img src="7.png" alt=""></div>
+      <div class="carousel-item"><img src="8.png" alt=""></div>
+      <div class="carousel-item"><img src="9.png" alt=""></div>
+      <div class="carousel-item"><img src="6.png" alt=""></div>
+      <div class="carousel-item"><img src="7.png" alt=""></div>
+      <div class="carousel-item"><img src="8.png" alt=""></div>
+      <div class="carousel-item"><img src="9.png" alt=""></div>
+      <div class="carousel-item"><img src="6.png" alt=""></div>
+      <div class="carousel-item"><img src="7.png" alt=""></div>
+      <div class="carousel-item"><img src="8.png" alt=""></div>
+      <div class="carousel-item"><img src="9.png" alt=""></div>
+      <div class="carousel-item"><img src="6.png" alt=""></div>
+      <div class="carousel-item"><img src="7.png" alt=""></div>
+      <div class="carousel-item"><img src="8.png" alt=""></div>
+      <div class="carousel-item"><img src="9.png" alt=""></div>
+      <div class="carousel-item"><img src="6.png" alt=""></div>
+      <div class="carousel-item"><img src="7.png" alt=""></div>
+      <div class="carousel-item"><img src="8.png" alt=""></div>
+      <div class="carousel-item"><img src="9.png" alt=""></div>
+      <div class="carousel-item"><img src="6.png" alt=""></div>
+      <div class="carousel-item"><img src="7.png" alt=""></div>
+      <div class="carousel-item"><img src="8.png" alt=""></div>
+      <div class="carousel-item"><img src="9.png" alt=""></div>
+      <div class="carousel-item"><img src="6.png" alt=""></div>
+      <div class="carousel-item"><img src="7.png" alt=""></div>
+      <div class="carousel-item"><img src="8.png" alt=""></div>
+      <div class="carousel-item"><img src="9.png" alt=""></div>
+      <div class="carousel-item"><img src="6.png" alt=""></div>
+      <div class="carousel-item"><img src="7.png" alt=""></div>
+      <div class="carousel-item"><img src="8.png" alt=""></div>
+      <div class="carousel-item"><img src="9.png" alt=""></div>
+      <div class="carousel-item"><img src="6.png" alt=""></div>
+      <div class="carousel-item"><img src="7.png" alt=""></div>
+      <div class="carousel-item"><img src="8.png" alt=""></div>
+      <div class="carousel-item"><img src="9.png" alt=""></div>
+      <div class="carousel-item"><img src="6.png" alt=""></div>
+      <div class="carousel-item"><img src="7.png" alt=""></div>
+      <div class="carousel-item"><img src="8.png" alt=""></div>
+      <div class="carousel-item"><img src="9.png" alt=""></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="frase-separador frase-oscura reveal">
+
+  <div class="linea-2 reveal"></div>
+
+  <p class="frase-texto-2 reveal">
+    QUEREMOS QUE SEAS PARTE DE ESTA NOCHE TAN ESPECIAL PARA NOSOTROS
+  </p>
+
+  <div class="linea-2 reveal"></div>
+
+</section>
+<section class="musica-section reveal">
+
+  <img src="Musica.gif" alt="Música" class="musica-icono">
+
+  <h2 class="musica-titulo">Sumá tu canción</h2>
+
+  <p class="musica-texto">
+    La fiesta la hacemos entre todos.<br> 
+    Te invitamos a sumar a nuestra playlist las canciones que<br> 
+    no pueden faltar para celebrar y bailar juntos.<br>
+  </p>
+
+  <!-- 🎧 VISTA PREVIA SPOTIFY -->
+ 
+  <a
+    href="https://www.youtube.com/playlist?list=PL-Aa310qF1zm8zQo5IJgetHDiIIsjpGuf&jct=eNgiSubTDRqsBxB7IZiPmA"
+    target="_blank"
+    class="musica-boton"
+  >
+    AGREGAR MÚSICA
+  </a>
+
+</section>
+
+
+<section class="instagram-section reveal">
+
+  <div class="instagram-contenido">
+
+    <!-- ICONO (logo instagram / gif) -->
+    <div class="instagram-icono">
+      <img src="Instagram.gif" alt="Instagram">
+    </div>
+
+    <h2 class="instagram-titulo">bodaLu&Gabi</h2>
+
+    <p class="instagram-texto">
+      Compartí tus fotos, videos y recuerdos<br>
+utilizando nuestro hashtag<br>
+      en Instagram.<br>
+    </p>
+
+    </section>
+
+<section class="asistencia-section reveal">
+  <p class="asistencia-titulo">Confirmá tú Asistencia</p>
+  <p class="asistencia-fecha">Antes del 15 de Marzo de 2026</p>
+
+  <!-- CANTIDAD (AFUERA DEL CUADRO) -->
+<div class="cantidad-wrapper">
+  <label for="cantidadPersonas" class="label-1">
+    Número de personas a confirmar
+  </label>
+
+  <select name="entry.540690027" id="cantidadPersonas" required>
+    <option value="">Seleccionar</option>
+    <option value="1">1 persona</option>
+    <option value="2">2 personas</option>
+    <option value="3">3 personas</option>
+    <option value="4">4 personas</option>
+    <option value="5">5 personas</option>
+    <option value="6">6 personas</option>
+    <option value="7">7 personas</option>
+  </select>
+</div>
+
+  <div class="asistencia-card">
+    <form
+      id="asistenciaForm" 
+      action="https://docs.google.com/forms/d/e/1FAIpQLSdSllL8fDbEZzcP1RnduvTvP_QGhn5E7duIl51aSFU29YkBfQ/formResponse"
+      method="POST"
+      target="hidden_iframe"
+    >
+   <input
+  type="hidden"
+  name="entry.540690027"
+  id="cantidadHidden"
+/>
+
+<div class="campo campo-radios">
+        <label class="label">¿Asistirás?</label>
+
+        <label class="radio-item">
+          <input type="radio" name="entry.1779840284" value="Confirmo Asistencia" required>
+          <span>¡Confirmo!</span>
+        </label>
+
+        <label class="radio-item">
+          <input type="radio" name="entry.1779840284" value="No podré asistir">
+          <span>No podré asistir</span>
+        </label>
+      </div>
+
+      <!-- Personas extra (2,3,4,5) -->
+<div id="personasExtra"></div>
+
+           <!-- INVITADOS -->
+      <div id="personasContainer"></div>
+
+      <!-- CAMPO OCULTO -->
+     <textarea
+  name="entry.555114571"
+  id="datosFinales"
+  style="display:none;"
+></textarea>
+
+
+      <!-- MENSAJE -->
+      <div class="campo">
+  <label class="label">Mensaje</label>
+
+  <textarea
+    name="entry.1248954764"
+    id="mensaje"
+    placeholder="Escribime lo que quieras 🤍"
+    maxlength="200"
+  ></textarea>
+
+  <small id="contador" style="
+    display:block;
+    margin-top:6px;
+    font-size:0.65rem;
+    letter-spacing:0.12em;
+    color:#F1ECE8;
+    text-align:right;
+  ">
+    180 caracteres restantes
+  </small>
+</div>
+
+    </form>
+
+    <button
+  type="submit"
+  class="asistencia-boton"
+  form="asistenciaForm"
+>
+  ENVIAR RESPUESTA
+</button>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <div id="mensajeGracias" class="mensaje-gracias oculto">
+      <p class="mensaje-titulo">¡Gracias!</p>
+      <p class="mensaje-texto">Tu respuesta fue enviada correctamente 🤍</p>
+    </div>
+  </div>
+</section>
+
+<section class="hospedaje-section reveal">
+
+  <h2 class="hospedaje-titulo">Alojamientos</h2>
+
+  <p class="hospedaje-texto">
+    Si venís de otra ciudad, acá te dejamos<br> 
+    opciones de hospedaje en Roque Pérez y la zona.<br>
+  </p>
+
+  <button class="album-boton" onclick="abrirHospedaje()">
+    VER ALOJAMIENTOS
+  </button>
+
+</section>
+
+<section class="calendario-section reveal">
+
+  <div class="calendario-contenido">
+
+    <!-- ICONO -->
+    <div class="calendario-icono">
+      <img src="Sobre.gif" alt="Calendario">
+    </div>
+
+    <h2 class="calendario-titulo">Save The Date</h2>
+
+    <p class="calendario-texto">
+      Sumá la fecha a tu calendario<br>
+      para no olvidarte de esta noche<br>
+      tan especial
+    </p>
+
+    <a
+      href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=M2t1YmEwcmxjNm5xb3B2MTEwODJnOTFvdDYgc29maXRydWViYUBt&tmsrc=sofitrueba%40gmail.com"
+      target="_blank"
+      class="calendario-boton"
+    >
+      AGREGAR AL CALENDARIO
+    </a>
+
+  </div>
+
+</section>
+
+<section class="frase-separador reveal">
+  <div class="linea reveal"></div>
+
+  <p class="frase-texto reveal">
+    PREPARATE PARA UNA NOCHE <strong>¡INOLVIDABLE!</strong>
+  </p>
+
+  <div class="linea reveal"></div>
+</section>
+
+<section class="foto-espera-section reveal">
+
+  <div class="foto-espera-contenido">
+
+    <!-- FOTO VERTICAL -->
+    <img src="FINAL.png" alt="Male" class="foto-espera-img">
+
+    <!-- ICONO -->
+    <img src="Corazones.gif" alt="Icono" class="foto-espera-icono">
+
+    <!-- TEXTO -->
+    <p class="foto-espera-texto">Los esperamos!</p>
+    <p class="foto-espera-nombre">Lu & Gabi</p>
+
+  </div>
+
+</section>
+
+  <script src="script.js"></script>
+
+  <footer class="footer">
+
+  <div class="footer-contenido">
+
+    <!-- LOGO -->
+    <img src="Pixelarte Logotipo.png" alt="Pixelarte" class="footer-logo">
+
+    <!-- REDES -->
+    <div class="footer-redes">
+
+      <a
+        href="https://wa.me/5492345478614"
+        target="_blank"
+        aria-label="WhatsApp"
+        class="footer-icono"
+      >
+        <img src="Whatsapp.png" alt="WhatsApp">
+      </a>
+
+      <a
+        href="https://www.instagram.com/pixelartechivilcoy/"
+        target="_blank"
+        aria-label="Instagram"
+        class="footer-icono"
+      >
+        <img src="Instagram.png" alt="Instagram">
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<div id="albumModal" class="album-modal">
+  <div class="album-modal-contenido">
+    <button class="album-cerrar" onclick="cerrarAlbum()">✕</button>
+
+    <iframe src="album.html"></iframe>
+  </div>
+</div>
+
+<div id="regaloModal" class="mapa-modal">
+  <div class="mapa-contenido">
+    <button class="mapa-cerrar" onclick="cerrarRegalo()">✕</button>
+
+    <div style="padding: 2.5rem; text-align: center;">
+      <h3 style="font-family:'Brittany'; color:#92A49F; margin-bottom:1rem;">
+        Datos Bancarios
+      </h3>
+
+      <p style="font-family:'Helvetica'; color:#787878; line-height:1.8;">
+        Titular: Lucila Latini<br>
+        Banco: Provincia<br>
+        CBU: 0140480103700450282131<br>
+        Alias: casamiento.luygabi
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="hospedajeModal" class="album-modal">
+  <div class="album-modal-contenido">
+    <button class="album-cerrar" onclick="cerrarHospedaje()">✕</button>
+
+    <div class="hospedaje-contenido">
+
+  <h2 class="hospedaje-modal-titulo">Alojamientos</h2>
+
+  <!-- HOTEL -->
+  <div class="hospedaje-bloque">
+    <h3>Hotel</h3>
+    <p>
+      <strong>Hotel Mayoral</strong><br>
+      Acceso Pedro Gutiérrez 2451<br>
+      <a href="tel:2227681062">2227 681062</a>
+    </p>
+  </div>
+
+  <!-- HOSTERÍAS -->
+  <div class="hospedaje-bloque">
+    <h3>Hosterías</h3>
+
+    <p>
+      <strong>Hostel “Lo de Nela”</strong><br>
+      Acceso Pedro Gutiérrez 2645<br>
+      <a href="tel:2227467505">2227 467505</a>
+    </p>
+
+    <p>
+      <strong>Hostería rural “Ñacurutú”</strong><br>
+      Paraje La Paz<br>
+      <a href="tel:2227470953">2227 470953</a>
+    </p>
+  </div>
+
+  <!-- CASAS DE FAMILIA -->
+  <div class="hospedaje-bloque">
+    <h3>Casas de familia</h3>
+
+    <p><strong>Gladys Graziosi</strong><br>
+    Cabral 33<br>
+    <a href="tel:01132148379">011 32148379</a></p>
+
+    <p><strong>María Cantani</strong><br>
+    9 de Julio 869<br>
+    <a href="tel:2227418979">2227 418979</a></p>
+
+    <p><strong>Lo de Gaby</strong><br>
+    Acceso Pedro Gutiérrez 2649<br>
+    <a href="tel:2227615700">2227 615700</a></p>
+  </div>
+
+  <!-- DEPARTAMENTOS Y CASAS -->
+  <div class="hospedaje-bloque">
+    <h3>Departamentos y casas</h3>
+
+    <p><strong>Casa de Campo Roque Pérez</strong><br>
+    Presidente Perón 192<br>
+    <a href="tel:2227528486">2227 528486</a></p>
+
+    <p><strong>Alojamiento Delfina</strong><br>
+    Chacabuco 649<br>
+    <a href="tel:2227474823">2227 474823</a></p>
+
+    <p><strong>Hospedaje Lo de Lucy</strong><br>
+    Antártida Argentina e/ Tarigo y Alsina<br>
+    <a href="tel:2227624902">2227 624902</a></p>
+
+    <p><strong>Becasina Alojamientos</strong><br>
+    Berro 302, Esquina Alem<br>
+    <a href="tel:2227481457">2227 481457</a></p>
+
+    <p><strong>Hospedaje Temporario</strong><br>
+    Irigoyen 373<br>
+    <a href="tel:2226502987">2226 502987</a></p>
+
+    <p><strong>Peter Pan</strong><br>
+    Albanesi 464<br>
+    <a href="tel:2227504897">2227 504897</a></p>
+
+    <p><strong>Alojamiento Maipú</strong><br>
+    Maipú 880<br>
+    <a href="tel:2227416761">2227 416761</a></p>
+
+    <p><strong>Apart Hotel Marino</strong><br>
+    Alsina 1661<br>
+    <a href="tel:2227403180">2227 403180</a></p>
+
+    <p><strong>Lo de Gra</strong><br>
+    Malvinas Argentinas 239<br>
+    <a href="tel:2227623579">2227 623579</a></p>
+
+    <p><strong>Hospedaje La Casita</strong><br>
+    Güemes 376<br>
+    <a href="tel:2227624882">2227 624882</a></p>
+
+    <p><strong>M&M</strong><br>
+    Lamadrid 1491<br>
+    <a href="tel:2227614013">2227 614013</a></p>
+
+    <p><strong>Marta Peralta</strong><br>
+    Alem 421<br>
+    <a href="tel:2227448651">2227 448651</a></p>
+
+    <p><strong>Monoambiente Claudia</strong><br>
+    Avellaneda 210<br>
+    <a href="tel:2227621957">2227 621957</a></p>
+
+    <p><strong>El Viejo Molino</strong><br>
+    25 de Mayo y Alsina<br>
+    <a href="tel:2227480419">2227 480419</a></p>
+
+    <p><strong>Departamentos Roque Pérez</strong><br>
+    Sabatté 2181<br>
+    <a href="tel:2227410951">2227 410951</a></p>
+
+    <p><strong>Lo de Miriam</strong><br>
+    Paulino Lanz 455<br>
+    <a href="tel:2227551172">2227 551172</a></p>
+
+    <p><strong>Laura Gatti</strong><br>
+    Rivadavia 260<br>
+    <a href="tel:2227465422">2227 465422</a></p>
+
+    <p><strong>Quincho La Mari</strong><br>
+    Alem 1951<br>
+    <a href="tel:2227465733">2227 465733</a></p>
+
+    <p><strong>Las Lilas Apart</strong><br>
+    Alem 1974 - 1982 - 1900 y 1998<br>
+    <a href="tel:2227611611">2227 611611</a></p>
+
+    <p><strong>Las Moras</strong><br>
+    Sabatté 2582<br>
+    <a href="tel:2227611611">2227 611611</a></p>
+
+    <p><strong>Casa Vero</strong><br>
+    Colón 2851<br>
+    <a href="tel:2227619120">2227 619120</a></p>
+
+    <p><strong>Modo Zen - Quincho</strong><br>
+    Homero Fernández 819<br>
+    <a href="tel:2227529984">2227 529984</a></p>
+  </div>
+
+  <!-- BASES PARA ACAMPAR -->
+  <div class="hospedaje-bloque">
+    <h3>Bases para acampar</h3>
+    <p>
+      <strong>Predio del Bicentenario</strong><br>
+      Luis María Campos S/N<br>
+      <a href="tel:2227570802">2227 570802</a>
+    </p>
+  </div>
+
+  <!-- CASAS DE CAMPO -->
+  <div class="hospedaje-bloque">
+    <h3>Casas de campo</h3>
+
+    <p><strong>Quinta de Nelly</strong><br>
+    Cuartel VI<br>
+    <a href="tel:2227472505">2227 472505</a></p>
+
+    <p><strong>Los Troncos</strong><br>
+    Km 148,5 Ruta Nacional 205<br>
+    <a href="tel:01140420828">011 40420828</a></p>
+
+    <p><strong>Estancia Los Álamos</strong><br>
+    Tucumán 1300<br>
+    <a href="tel:01123192009">011 23192009</a></p>
+
+    <p><strong>María Jimena Carballeda</strong><br>
+    Paraje La Paz Chica<br>
+    <a href="tel:2227471707">2227 471707</a></p>
+
+    <p><strong>La Goly</strong><br>
+    Paraje La Paz Chica<br>
+    <a href="tel:2227612792">2227 612792</a></p>
+
+    <p><strong>La Herradura</strong><br>
+    Paraje Forastieri<br>
+    <a href="tel:2345528144">2345 528144</a></p>
+
+    <p><strong>Las Abelias</strong><br>
+    Fournier 1688<br>
+    <a href="tel:2227614567">2227 614567</a></p>
+
+    <p><strong>La Desconocida</strong><br>
+    Los Médanos<br>
+    <a href="tel:2227449423">2227 449423</a></p>
+  </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
